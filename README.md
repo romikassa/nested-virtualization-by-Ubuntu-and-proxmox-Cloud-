@@ -184,6 +184,8 @@ Ces résultats montrent que les six machines sont joignables sur le même résea
 <!-- ![Ping depuis VM11](images/ping-vm11.png) -->
 <!-- ![Page de connexion de VM22 sur téléphone](images/vm22-telephone.png) -->
 
+👉 [Voir le rapport de captures d'écran](CAPTURES.md)
+
 ## 8. Problèmes rencontrés et solutions
 
 **1. Virtualisation imbriquée refusée (message *VT-x/EPT is not supported*).** Windows utilisait déjà son propre hyperviseur (WSL 2, plateforme de machine virtuelle, intégrité de la mémoire). Solution : désactiver ces fonctionnalités dans `optionalfeatures`, désactiver l'intégrité de la mémoire et exécuter `bcdedit /set hypervisorlaunchtype off`, puis redémarrer. Le message est revenu plus tard, et j'ai dû répéter la manipulation.
